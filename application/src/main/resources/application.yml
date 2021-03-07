@@ -1,0 +1,14 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:123456@localhost:27017/clean-arch-example?authSource=admin&authMechanism=SCRAM-SHA-1
+      authentication-database: clean-arch-example
+  jpa:
+    open-in-view: false
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

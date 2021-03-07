@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  test:
+    image: gradle:6.6-jdk11
+    working_dir: /home/app
+    volumes:
+      - .:/home/app
+    command: "gradle test"
+
+  build:
+    image: gradle:6.6-jdk11
+    working_dir: /home/app
+    volumes:
+      - .:/home/app
+    command: "gradle clean build"
